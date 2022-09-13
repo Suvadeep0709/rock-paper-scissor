@@ -9,8 +9,18 @@ public class rock {
         Scanner scan =new Scanner(System.in);
         String choice=scan.nextLine();
         if (choice.equals("yes")){
-            
+            System.out.println("Great");
+            System.out.println("rock -- paper -- scissors, shoot!");
+            String userChoice=scan.nextLine();
+            //computer choice
+            //get the result 
+            //print everything
+
+        }
+        else {
+            System.out.println("Darn some other time then ");
         }
     }
+
     
 }
