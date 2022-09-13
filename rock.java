@@ -11,11 +11,13 @@ public class rock {
         if (choice.equals("yes")){
             System.out.println("Great");
             System.out.println("rock -- paper -- scissors, shoot!");
-            String userChoice=scan.nextLine();
+            String yourChoice=scan.nextLine();
             //computer choice
             String computer=computerChoice();
+            System.out.println("Your Choice "+yourChoice);
+            System.out.println("Computer Choice "+computer);
             
-            //get the result 
+            String finalResult=result(yourChoice, computer);
             //print everything
 
         }
@@ -30,6 +32,32 @@ public class rock {
             case 2 : return "paper";
             case 3 : return "scissor";
             default : return " ";
+        }
+    }
+    public static String result(String yourChoice,String computerChoice){
+        if(yourChoice=="rock" && computerChoice=="scissors"){
+            return "You win";
+        }
+        else if(yourChoice=="paper" && computerChoice=="rock"){
+            return "You win";
+        }
+        else if(yourChoice=="scissors" && computerChoice=="paper"){
+            return "You win";
+        }
+        else if(yourChoice=="scissors" && computerChoice=="rock"){
+            return "You loose";
+        }
+        else if(yourChoice=="rock" && computerChoice=="paper"){
+            return "You loose";
+        }
+        else if(yourChoice=="paper" && computerChoice=="scissors"){
+            return "You loose";
+        }
+        else if (yourChoice.equals(computerChoice)){
+            return " Its a tie";
+        }
+        else {
+            return " ";
         }
     }
 
