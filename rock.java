@@ -13,12 +13,23 @@ public class rock {
             System.out.println("rock -- paper -- scissors, shoot!");
             String userChoice=scan.nextLine();
             //computer choice
+            String computer=computerChoice();
+            
             //get the result 
             //print everything
 
         }
         else {
             System.out.println("Darn some other time then ");
+        }
+    }
+    public static String computerChoice(){
+        int random=(int)(Math.random()*3)+1;
+        switch(random){
+            case 1 : return "rock";
+            case 2 : return "paper";
+            case 3 : return "scissor";
+            default : return " ";
         }
     }
 
