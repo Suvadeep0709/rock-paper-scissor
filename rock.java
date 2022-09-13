@@ -13,12 +13,12 @@ public class rock {
             System.out.println("rock -- paper -- scissors, shoot!");
             String yourChoice=scan.nextLine();
             //computer choice
-            String computer=computerChoice();
+            String computerChoice=computerChoice();
             System.out.println("Your Choice "+yourChoice);
-            System.out.println("Computer Choice "+computer);
+            System.out.println("Computer Choice "+computerChoice);
             
-            String finalResult=result(yourChoice, computer);
-            //print everything
+            String finalResult=result(yourChoice, computerChoice);
+            printResult(yourChoice, computerChoice, finalResult);
 
         }
         else {
@@ -59,6 +59,11 @@ public class rock {
         else {
             return " ";
         }
+    }
+    public static void printResult(String yourChoice,String computerChoice,String result){
+        System.out.println("You choose :"+yourChoice);
+        System.out.println("The Computer choose " +computerChoice);
+        System.out.println(result);
     }
 
     
